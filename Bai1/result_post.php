@@ -1,0 +1,1 @@
+<?php echo "Xin chào ".$_POST['name'].", tuổi bạn là ".$_POST['age']?>

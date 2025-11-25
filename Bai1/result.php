@@ -1,0 +1,1 @@
+<?php echo "Xin chào ".$_GET['name'].", tuổi bạn là ".$_GET['age']?>

@@ -1,0 +1,1 @@
+<?php echo "Xin chào ".$_REQUEST['name'].", tuổi bạn là ".$_REQUEST['age']?>
