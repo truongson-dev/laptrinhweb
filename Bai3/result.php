@@ -1,39 +1,49 @@
-<?php
-/**
- * Hàm kiểm tra tính hợp lệ của email
- */
-function isValidEmail($email) {
-    return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-}
-
-/**
- * Hàm kiểm tra tính hợp lệ của mật khẩu
- */
-function isValidPassword($password) {
-    return strlen($password) >= 6;
-}
-
-/**
- * Hàm kiểm tra toàn bộ form
- */
-function validateForm($email, $password) {
-    $errors = [];
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kết quả kiểm tra</title>
+</head>
+<body>
+    <h1>Kết quả kiểm tra</h1>
     
-    if (empty($email)) {
-        $errors['email'] = "Email không được để trống";
-    } elseif (!isValidEmail($email)) {
-        $errors['email'] = "Email không đúng định dạng";
+    <?php
+    // Kiểm tra nếu form được submit
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Lấy dữ liệu từ form
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+        
+        $errors = [];
+        
+        // Kiểm tra định dạng email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Email không đúng định dạng";
+        }
+        
+        // Kiểm tra độ dài mật khẩu
+        if (strlen($password) < 6) {
+            $errors[] = "Mật khẩu phải có ít nhất 6 ký tự";
+        }
+        
+        // Hiển thị kết quả
+        if (empty($errors)) {
+            echo "<p><strong>Thông tin hợp lệ.</strong></p>";
+            echo "<p>Email: " . htmlspecialchars($email) . "</p>";
+        } else {
+            echo "<p><strong>Thông tin không hợp lệ:</strong></p>";
+            echo "<ul>";
+            foreach ($errors as $error) {
+                echo "<li>$error</li>";
+            }
+            echo "</ul>";
+        }
+        
+        echo '<br><a href="form.php">Quay lại form</a>';
+        
+    } else {
+        echo "<p>Lỗi: Không có dữ liệu được gửi đi</p>";
+        echo '<a href="form.php">Quay lại form</a>';
     }
-    
-    if (empty($password)) {
-        $errors['password'] = "Mật khẩu không được để trống";
-    } elseif (!isValidPassword($password)) {
-        $errors['password'] = "Mật khẩu phải có ít nhất 6 ký tự";
-    }
-    
-    return [
-        'isValid' => empty($errors),
-        'errors' => $errors
-    ];
-}
-?>
+    ?>
+</body>
+</html>

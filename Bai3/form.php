@@ -1,62 +1,30 @@
-  <?php
-    // Khởi tạo biến
-    $email = $password = "";
-    $emailErr = $passwordErr = "";
-    $valid = false;
-
-    // Xử lý khi form được gửi
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Lấy dữ liệu và xử lý khoảng trắng
-        $email = trim($_POST['email'] ?? '');
-        $password = trim($_POST['password'] ?? '');
-        
-        // Kiểm tra email
-        if (empty($email)) {
-            $emailErr = "Email không được để trống";
-        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $emailErr = "Email không đúng định dạng";
-        }
-        
-        // Kiểm tra mật khẩu
-        if (empty($password)) {
-            $passwordErr = "Mật khẩu không được để trống";
-        } elseif (strlen($password) < 6) {
-            $passwordErr = "Mật khẩu phải có ít nhất 6 ký tự";
-        }
-        
-        // Nếu không có lỗi
-        if (empty($emailErr) && empty($passwordErr)) {
-            $valid = true;
-        }
-    }
-    ?>
-
-    <?php if ($valid): ?>
-        <div class="success">
-            <h3>Thông tin hợp lệ!</h3>
-            <p>Email: <?php echo htmlspecialchars($email); ?></p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đăng nhập - Kiểm tra thông tin</title>
+</head>
+<body>
+    <h1>Đăng nhập hệ thống</h1>
+    
+    <form method="POST" action="result.php">
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" required>
         </div>
-    <?php else: ?>
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <div>
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email" value="<?php echo htmlspecialchars($email); ?>">
-                <?php if (!empty($emailErr)): ?>
-                    <span class="error"><?php echo $emailErr; ?></span>
-                <?php endif; ?>
-            </div>
-            <br>
-            <div>
-                <label for="password">Mật khẩu:</label><br>
-                <input type="password" id="password" name="password">
-                <?php if (!empty($passwordErr)): ?>
-                    <span class="error"><?php echo $passwordErr; ?></span>
-                <?php endif; ?>
-            </div>
-            <br>
-            <input type="submit" value="Kiểm tra">
-        </form>
-    <?php endif; 
-?>
+        
+        <div>
+            <label for="password">Mật khẩu:</label><br>
+            <input type="password" name="password" id="password" required>
+        </div>
+        
+        <br>
+        <button type="submit">Kiểm tra</button>
+    </form>
+    
+    <h3>Yêu cầu:</h3>
+    <ul>
+        <li>Email phải đúng định dạng</li>
+        <li>Mật khẩu ít nhất 6 ký tự</li>
+    </ul>
 </body>
 </html>
