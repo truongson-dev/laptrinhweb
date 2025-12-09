@@ -1,0 +1,20 @@
+Dòng 1: Đây là file vừa để test phương pháp đọc từng dòng.
+Dòng 2: File này có kích thước khoảng 2KB, phù hợp để test fgets().
+Dòng 3: Phương pháp fgets() đọc từng dòng nên rất tiết kiệm bộ nhớ.
+Dòng 4: Khi xử lý file lớn, nên dùng fgets() để tránh quá tải.
+Dòng 5: Mỗi dòng được đọc và xử lý riêng biệt.
+Dòng 6: Đây là cách tiếp cận từ trên xuống.
+Dòng 7: File này có nhiều dòng để minh họa.
+Dòng 8: Bạn có thể thấy từng dòng được xử lý riêng.
+Dòng 9: Điều này rất hữu ích khi cần xử lý từng phần của file.
+Dòng 10: Ví dụ: đọc file log, file CSV, v.v.
+Dòng 11: File vừa là file có kích thước trung bình.
+Dòng 12: Không quá nhỏ để không thấy hiệu quả.
+Dòng 13: Cũng không quá lớn để gây chậm chạp.
+Dòng 14: Khoảng 2KB là kích thước phù hợp.
+Dòng 15: Để test phương pháp đọc từng dòng.
+Dòng 16: Mỗi dòng là một đơn vị thông tin.
+Dòng 17: Có thể dễ dàng phân tích và xử lý.
+Dòng 18: Với fgets(), bạn đọc đến khi gặp ký tự xuống dòng.
+Dòng 19: Hoặc khi đạt đến độ dài chỉ định.
+Dòng 20: Đây là dòng cuối cùng của file vừa.

@@ -1,0 +1,5 @@
+Đây là nội dung mẫu của file data.txt.
+File này được sử dụng cho Bài 1: Đọc nội dung file.
+Bạn có thể chỉnh sửa nội dung file này theo ý muốn.
+
+Chúc các bạn học tập tốt môn Lập trình Web!

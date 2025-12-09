@@ -1,0 +1,4 @@
+Xin chào! Đây là file nhỏ để test.
+File này dùng cho phương pháp 1: file_get_contents()
+File nhỏ rất phù hợp với phương pháp này vì nó đọc toàn bộ file một lần.
+Đây là dòng cuối cùng của file nhỏ.

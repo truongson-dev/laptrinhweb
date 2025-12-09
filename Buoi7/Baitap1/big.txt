@@ -1,0 +1,4216 @@
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+v
+
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+vv
+
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+vv
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+v
+vDòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+v
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
+vv
+Dòng 001: ĐÂY LÀ FILE LỚN ĐỂ TEST PHƯƠNG PHÁP file()
+Dòng 002: File này có kích thước khoảng 20KB
+Dòng 003: Với file lớn, phương pháp file() sẽ đọc toàn bộ vào mảng
+Dòng 004: Mỗi phần tử mảng là một dòng của file
+Dòng 005: Phương pháp này rất tiện khi cần xử lý từng dòng
+Dòng 006: Nhưng cần chú ý đến việc sử dụng bộ nhớ
+Dòng 007: Vì toàn bộ file được đọc vào bộ nhớ một lúc
+Dòng 008: Với file quá lớn, có thể gây ra lỗi
+Dòng 009: File lớn thường là file log, file dữ liệu, v.v.
+Dòng 010: Phương pháp file() tự động tách thành mảng
+Dòng 011: Rất thuận tiện cho việc xử lý dữ liệu theo dòng
+Dòng 012: Bạn có thể dùng vòng lặp foreach để xử lý từng dòng
+Dòng 013: Hoặc truy cập trực tiếp vào dòng cần xử lý
+Dòng 014: Đây là ưu điểm của phương pháp này
+Dòng 015: Nhưng cần cân nhắc với file rất lớn
+Dòng 016: Để tránh tiêu tốn quá nhiều bộ nhớ
+Dòng 017: File này có 100 dòng để minh họa
+Dòng 018: Mỗi dòng chứa thông tin và số thứ tự
+Dòng 019: Giúp bạn dễ theo dõi khi test
+Dòng 020: Khi file được đọc bằng phương pháp file()
+Dòng 021: Nó sẽ trả về một mảng với 100 phần tử
+Dòng 022: Mỗi phần tử là một dòng của file
+Dòng 023: Bạn có thể đếm số dòng bằng count()
+Dòng 024: Hoặc truy cập dòng cụ thể bằng chỉ số
+Dòng 025: Ví dụ: $lines[0] là dòng đầu tiên
+Dòng 026: $lines[99] là dòng cuối cùng (nếu có 100 dòng)
+Dòng 027: Điều này rất hữu ích khi xử lý dữ liệu
+Dòng 028: Đặc biệt là file có cấu trúc cố định
+Dòng 029: Như file CSV, file log, file cấu hình
+Dòng 030: Mỗi dòng có thể chứa một bản ghi
+Dòng 031: Hoặc một cấu hình cụ thể
+Dòng 032: Phương pháp file() giúp xử lý dễ dàng
+Dòng 033: Nhưng cần lưu ý về hiệu suất
+Dòng 034: Với file cực lớn (vài MB trở lên)
+Dòng 035: Nên dùng fgets() để đọc từng dòng
+Dòng 036: Để tránh quá tải bộ nhớ
+Dòng 037: Tuy nhiên, với file khoảng vài chục KB
+Dòng 038: Phương pháp file() vẫn hoạt động tốt
+Dòng 039: Và mang lại sự tiện lợi
+Dòng 040: Khi cần thao tác với từng dòng
+Dòng 041: Vì vậy, tùy vào tình huống cụ thể
+Dòng 042: Mà chọn phương pháp phù hợp
+Dòng 043: File nhỏ: file_get_contents()
+Dòng 044: File lớn: fgets()
+Dòng 045: File trung bình và cần xử lý từng dòng: file()
+Dòng 046: Đây là nguyên tắc chung khi làm việc với file
+Dòng 047: Trong PHP, còn nhiều hàm khác liên quan
+Dòng 048: Như fread(), fgetcsv(), file_get_contents()
+Dòng 049: Mỗi hàm có ưu điểm riêng
+Dòng 050: Tùy vào nhu cầu mà lựa chọn
+Dòng 051: File này tiếp tục với các dòng mẫu
+Dòng 052: Để đạt kích thước khoảng 20KB
+Dòng 053: Đủ lớn để thấy sự khác biệt
+Dòng 054: Giữa các phương pháp đọc file
+Dòng 055: Nhưng không quá lớn để gây chậm
+Dòng 056: Khi test trên localhost
+Dòng 057: Hoặc server có cấu hình thấp
+Dòng 058: Đây là những dòng tiếp theo
+Dòng 059: Để tăng kích thước file
+Dòng 060: Và cung cấp đủ dữ liệu
+Dòng 061: Cho việc test các phương pháp
+Dòng 062: Đọc file trong PHP
+Dòng 063: Mỗi dòng đều có số thứ tự
+Dòng 064: Để dễ theo dõi và kiểm tra
+Dòng 065: Khi hiển thị trên giao diện web
+Dòng 066: Bạn sẽ thấy rõ từng dòng
+Dòng 067: Với định dạng và màu sắc
+Dòng 068: Giúp phân biệt dễ dàng
+Dòng 069: Đây là mục đích của file test
+Dòng 070: Cung cấp dữ liệu đầy đủ
+Dòng 071: Để kiểm tra hiệu quả
+Dòng 072: Của từng phương pháp đọc file
+Dòng 073: Hy vọng file này hữu ích
+Dòng 074: Cho việc học tập và thực hành
+Dòng 075: Lập trình web với PHP
+Dòng 076: Đặc biệt là xử lý file
+Dòng 077: Một kỹ năng quan trọng
+Dòng 078: Trong phát triển web
+Dòng 079: File tiếp tục với các dòng
+Dòng 080: Để đạt đủ kích thước
+Dòng 081: 20KB cho file lớn
+Dòng 082: Phù hợp với phương pháp file()
+Dòng 083: Hoặc fgets() tùy chọn
+Dòng 084: Tùy vào cách bạn muốn test
+Dòng 085: File này gần đạt đủ kích thước
+Dòng 086: Chỉ còn vài dòng nữa
+Dòng 087: Là sẽ hoàn thành
+Dòng 088: File test với 100 dòng
+Dòng 089: Cho mục đích học tập
+Dòng 090: Và thực hành PHP
+Dòng 091: Hy vọng bạn thấy hữu ích
+Dòng 092: Với các file test này
+Dòng 093: Chúc bạn học tập tốt
+Dòng 094: Và thành công với PHP
+Dòng 095: Đây là những dòng cuối cùng
+Dòng 096: Của file lớn để test
+Dòng 097: Cảm ơn đã sử dụng
+Dòng 098: Các file test này
+Dòng 099: Hẹn gặp lại trong các bài học khác
+Dòng 100: ĐÂY LÀ DÒNG CUỐI CÙNG CỦA FILE LỚN.
