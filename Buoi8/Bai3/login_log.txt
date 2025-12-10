@@ -1,0 +1,7 @@
+2025-12-10 02:28:42 - Failed login attempt for user 'admin' from ::1
+2025-12-10 02:28:45 - User 'admin' logged in from ::1
+2025-12-10 02:28:52 - User 'admin' logged out
+2025-12-10 02:34:01 - User 'admin' logged in from ::1
+2025-12-10 02:36:26 - User 'admin' logged in from ::1
+2025-12-10 02:36:31 - User 'admin' logged out
+2025-12-10 02:44:04 - User 'admin' logged in from ::1
